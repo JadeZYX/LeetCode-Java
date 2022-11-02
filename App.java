@@ -4,8 +4,7 @@
 public class App {
     public static void main(String[] args) {
 
-       P0797AllPathsFromSourceToTarget p797 = new P0797AllPathsFromSourceToTarget();
-       System.out.println(p797.allPathsSourceTarget(new int[][]{{4,3,1},{3,2,4},{3},{4},{}}));
+
 
         /*
         Scanner scanner = new Scanner(System.in);
