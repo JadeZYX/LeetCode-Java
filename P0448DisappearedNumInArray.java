@@ -19,7 +19,7 @@ public class P0448DisappearedNumInArray {
        for(int k:set){//将hashset里的数传入要求返回的list里
            res.add(k);
        }
-       return res;  
+       return res;
     }
     public List<Integer> findDisappearedIntegers1(int[]nums){
         ArrayList<Integer> res=new ArrayList<>();
@@ -36,6 +36,7 @@ public class P0448DisappearedNumInArray {
     }
 }
 /*
+或者是将array里面的元素放入set里，然后再for循环，从1到n看是否存在，如果不存在，则添加到结果里
         P0448DisappearedNumInArray p448=new P0448DisappearedNumInArray();
         List<Integer>res=p448.findDisappearedIntegers1(new int[]{4,3,2,7,8,2,3,1});
         for(int num:res){
