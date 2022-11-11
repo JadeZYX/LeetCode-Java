@@ -3,9 +3,8 @@
 
 public class App {
     public static void main(String[] args) {
-        P0003LongestSubstringWithoutRepeatingCh p3 = new P0003LongestSubstringWithoutRepeatingCh();
-        String s = "pwwkew";
-        System.out.println(p3.lengthOfLongestSubstring1(s));
+
+
 
         //System.out.println("null");
 
