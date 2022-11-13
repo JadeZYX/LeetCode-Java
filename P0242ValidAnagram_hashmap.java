@@ -76,6 +76,26 @@ public class P0242ValidAnagram_hashmap {
         }
         return true;
     }
+
+    public boolean isAnagram3(String s, String t) {
+        //check length 如果长度不一致，肯定是false
+        if(s.length()!= t.length())return false;
+        //确保长度一致，再统计出彼此每个单词的出现频率，再去查看频率是否一致
+        HashMap<Character,Integer>map1 = new HashMap<>();
+        HashMap<Character,Integer>map2 = new HashMap<>();
+        for(int i = 0;i<s.length();i++){
+            map1.put(s.charAt(i),map1.getOrDefault(s.charAt(i),0)+1);
+        }
+        for(int j = 0;j<t.length();j++){
+            map2.put(t.charAt(j),map2.getOrDefault(t.charAt(j),0)+1);
+        }
+        for(Character c:map1.keySet()){
+            if(!map2.containsKey(c)&& map1.get(c)!= map2.get(c)){//注意这里用且
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 /*
