@@ -90,7 +90,8 @@ public class P0242ValidAnagram_hashmap {
             map2.put(t.charAt(j),map2.getOrDefault(t.charAt(j),0)+1);
         }
         for(Character c:map1.keySet()){
-            if(!map2.containsKey(c)&& map1.get(c)!= map2.get(c)){//注意这里用且
+            if(!map2.containsKey(c)|| map1.get(c).equals(map2.get(c)) ){
+                //if语句里需要两个条件 且 Integer属于复杂类型，所以不能用==，必须用equals
                 return false;
             }
         }
